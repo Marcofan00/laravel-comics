@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('detail', function() {
     return view('pages.detail');
 });
+
+Route::get('/', 'HomeController@home') -> name('home');
+
+Route::get('detail', 'HomeController@detail');
